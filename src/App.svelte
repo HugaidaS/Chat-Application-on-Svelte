@@ -1,16 +1,23 @@
 <script>
-  import Tailwind from './components/Tailwind.svelte';
-
-  export let name;
+import Tailwind from './components/Common/Tailwind.svelte'
+import ScrollMenu from "./components/scrollMenu/scrollMenu.svelte"
+import ChatMenu from './components/chatMenu/chatMenu.svelte';
+import ChatContainer from './components/chatWindow/chatContainer.svelte';
 </script>
 
-<Tailwind />
-
-<main class="text-center p-4 max-w-xs mx-auto sm:max-w-none">
-  <h1 class="text-red-500 text-6xl uppercase leading-loose font-thin">Hello {name}!</h1>
-  <p class="text-gray-700">
-    Visit the <a class="text-blue-600 hover:underline" href="https://svelte.dev/tutorial"
-      >Svelte tutorial</a
-    > to learn how to build Svelte apps.
-  </p>
+<main class="h-100 flex max-h-screen">
+  <Tailwind />
+  <ScrollMenu/>
+  <ChatMenu/>
+  <ChatContainer/>
 </main>
+
+<style>
+  main {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px; 
+  }
+
+
+</style>
